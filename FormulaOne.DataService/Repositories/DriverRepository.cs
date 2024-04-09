@@ -30,6 +30,27 @@ public class DriverRepository : GenericRepository<Driver>, IDriverRepository
        }
     }
     
+    public override async Task<bool> Delete(Guid id)
+    {
+      
+      try
+      {
+         // get my entity:
+         var result = await _dbSet!.FirstOrDefaultAsync(x => x.Id == id);
+         if (result == null)
+            return false;
 
+         result.Status = 0; //* para marcarlo como eliminado.
+         result.UpdatedDate = DateTime.UtcNow;
+
+         return true;
+
+      }
+      catch(Exception e) 
+      {
+        _logger!.LogError(e, "{Repo} Delete function error.", typeof(DriverRepository));
+        return false;
+      }
+    }
 
 }
