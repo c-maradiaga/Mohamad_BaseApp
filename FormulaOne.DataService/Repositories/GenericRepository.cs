@@ -1,5 +1,6 @@
 using FormulaOne.DataService.Data;
 using FormulaOne.DataService.Repositories.Interfaces;
+using FormulaOne.Entities.DbSet;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
@@ -36,8 +37,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
 
     public virtual async Task<IEnumerable<T?>> GetAllAsync()
     {
-       //return  await _dbSet.
-       throw new NotImplementedException();
+     throw new NotImplementedException();
     }
 
 
@@ -45,13 +45,9 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
     public virtual async Task<T?> GetByIdAsync(Guid id)
     {
         return await _dbSet!.FindAsync(id); 
-
-            
     }
 
-
-
-    public virtual Task<bool> Update(Guid id)
+    public virtual Task<bool> Update(T entity)
     {
         throw new NotImplementedException();
     }

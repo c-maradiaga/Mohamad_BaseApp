@@ -62,7 +62,7 @@ internal: Visible solo dentro del mismo proyecto (ensamblado).
 * Polymorphism: It supports polymorphism, where a method can have different behaviors based on the runtime type of the object that invokes it. This is a core concept in object-oriented programming that allows for more flexible and reusable code.
 * So, in summary, the virtual keyword provides flexibility and extensibility in your code, allowing derived classes to customize the behavior of the method as needed.
 * 
-
+[https://youtu.be/NNiupSwiVfg?t=2499]
 
 
 

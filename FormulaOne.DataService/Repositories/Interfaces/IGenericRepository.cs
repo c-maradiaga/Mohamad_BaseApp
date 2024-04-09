@@ -6,5 +6,5 @@ public interface IGenericRepository<T> where T : class
     Task<T?> GetByIdAsync(Guid id);
     Task<bool> Add(T entity);
     Task<bool> Delete(Guid id);
-    Task<bool> Update(Guid id);
+    Task<bool> Update(T entity);
 }

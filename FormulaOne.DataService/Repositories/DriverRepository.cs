@@ -32,7 +32,6 @@ public class DriverRepository : GenericRepository<Driver>, IDriverRepository
     
     public override async Task<bool> Delete(Guid id)
     {
-      
       try
       {
          // get my entity:
@@ -53,4 +52,28 @@ public class DriverRepository : GenericRepository<Driver>, IDriverRepository
       }
     }
 
+    public override async Task<bool> Update(Driver driver)
+    {
+        try 
+        {
+            //* get the entity:
+            var result = await _dbSet!.FirstOrDefaultAsync(x => x.Id == driver.Id);
+            if (result == null) return false;
+
+            result.UpdatedDate = DateTime.UtcNow;
+            result.DriverNumber = driver.DriverNumber;
+            result.FirstName = driver.FirstName;
+            result.LastName = driver.LastName;
+            result.DateOfBirth = driver.DateOfBirth;
+
+            return true;
+        
+        }
+        catch(Exception e)
+        {
+            _logger!.LogError(e, "{Repo} Update function error", typeof(DriverRepository));
+            return false;
+        }
+
+    }
 }
