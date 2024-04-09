@@ -70,6 +70,12 @@ internal: Visible solo dentro del mismo proyecto (ensamblado).
 [16] Creando la clase UnitOfWork
 [https://youtu.be/NNiupSwiVfg?t=2876]
 
+[17] en Program.cs se especifica el UnitOfWork:
+para poder usar el UnitOfWork en los endpoints
+
+[18] Agregando los controladores [https://youtu.be/NNiupSwiVfg?t=3043]
+dotnet add package Automapper  --> estando dentro del proyecto .API
+dotnet add package Automapper.Extensions.Microsoft.DependencyInjection
 
 
 
