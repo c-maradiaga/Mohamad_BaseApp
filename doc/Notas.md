@@ -61,8 +61,14 @@ internal: Visible solo dentro del mismo proyecto (ensamblado).
 * Overriding Behavior: If a subclass needs to change the way the Add method works (for example, to add some validation or logging), it can override the method and provide the new behavior while still having the option to call the base class implementation
 * Polymorphism: It supports polymorphism, where a method can have different behaviors based on the runtime type of the object that invokes it. This is a core concept in object-oriented programming that allows for more flexible and reusable code.
 * So, in summary, the virtual keyword provides flexibility and extensibility in your code, allowing derived classes to customize the behavior of the method as needed.
-* 
-[https://youtu.be/NNiupSwiVfg?t=2499]
+
+[https://youtu.be/NNiupSwiVfg?t=2112] Creación del método GetAllAsync clase DriverRepository
+[https://youtu.be/NNiupSwiVfg?t=2329] Creacion del Método Delete de la clase DriverRepository
+[https://youtu.be/NNiupSwiVfg?t=2387] Creacion del Update de la clase DriverRepository
+[https://youtu.be/NNiupSwiVfg?t=2501] Creacion de AchivementRepository
+
+[16] Creando la clase UnitOfWork
+[https://youtu.be/NNiupSwiVfg?t=2876]
 
 
 
